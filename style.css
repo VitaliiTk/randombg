@@ -1,0 +1,98 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: sans-serif;
+    background-color: #222222;
+    transition: all ease 0.5s;
+}
+
+.wrapper {
+    text-align: center;
+    background-color: #222;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.color-title {
+    background-color: #222222;
+    color: #E7E7E7;
+/*    padding: 15px;*/
+    font-size: 32px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.color-number {
+    color: #58A6DC;
+    text-transform: uppercase;
+}
+
+.color-btn {
+    background-color: transparent;
+    border-radius: 8px;
+    padding: 10px;
+    letter-spacing: 2px;
+    font-size: 18px;
+    user-select: none;
+    cursor: pointer;
+    transition: all 0.3s;
+    border: 2px solid #fff;
+    display: inline-block;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.color-btn:hover {
+    letter-spacing: 3px;
+}
+
+.text {
+    color: #fff;
+    font-size: 12px;
+}
+
+.checker-wrapper {
+    width: 40px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 20px;
+    margin: 0 auto;
+    border: 2px solid #fff;
+    background-color: transparent;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+}
+
+.checker {
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: all ease 0.5s;
+    transform: translateX(-1px);
+}
+
+.checker-wrapper::before {
+    content: 'NO';
+    position: absolute;
+    left: -30px;
+    top: 2px;
+    color: #fff;
+}
+
+.checker-wrapper::after {
+    content: 'YES';
+    position: absolute;
+    left: 45px;
+    top: 2px;
+    color: #fff;
+}
+
+.checker.active {
+    transform: translateX(21px);
+}
